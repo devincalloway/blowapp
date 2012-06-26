@@ -15,3 +15,14 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+//Jquery Input token
+
+$(function() {
+  $("#post_tags").tokenInput("/posts/tags.json", {
+    crossDomain: false,
+    prePopulate: $("#f_tags").data("pre"),
+    theme: "facebook",
+    allowCustomEntry: true
+  });
+});

@@ -19,6 +19,13 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+  
+  <div class="field">
+  <%= f.text_field :tag_tokens, 
+             :id => "post_tags", 
+             "data-pre" => @post.tag_list.map {|tag| {:id => tag, :name => tag } }.to_json %>
+  </div>
+  
 <div class="field">
   <%= check_box("post", "published" ) %>
   <%= "Publish post" %>
