@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div id="post-content" class="span-17">
+  <div class="post_title">
+  <h1><%= @post.title %></h1>
+  </div>
+ <div class="post_body">
+    <p>By <%= @post.user.name %>
+    on <%= @post.created_at.strftime("%B %d, %Y") %>
+ </p>
+    <p>
+      <%= @post.body %>
+    </p>
+  </div>
+</div>
+
+<ul class="nav">
+<% if can? :manage, @post %>
+  <li><%= link_to 'Edit', edit_post_path %></li>
+<% end %>
+
+<% if can? :manage, @post %>
+      <li><%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %></li>
+   <% end %>
+
+
+
+</ul>
+
+<%= link_to 'Back', posts_path %>

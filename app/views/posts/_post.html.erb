@@ -1,0 +1,18 @@
+<div class="post_header">
+  <h2><%= link_to post.title, post %></h2>
+  By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
+</div>
+  <%= truncate(post.body, :length => 500) %> <%= link_to 'Read more...', post %>
+<ul class="nav">
+
+ <% if can? :manage, @post%>
+  <li><%= link_to 'Edit', edit_post_path(post) %> </li>
+<% end %>
+   
+   <% if can? :manage, post %>
+      <li>
+      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+   <% end %>
+
+</ul>
