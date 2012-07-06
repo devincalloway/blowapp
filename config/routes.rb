@@ -7,6 +7,7 @@ match "/posts/tag/:id" => "posts#tag", :as => :tag_posts
 resources :posts do
 collection do
   get :tag
+  get :tags
 end
 end
 
