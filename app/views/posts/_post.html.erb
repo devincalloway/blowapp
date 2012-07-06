@@ -3,6 +3,15 @@
   By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
 </div>
   <%= truncate(post.body, :length => 500) %> <%= link_to 'Read more...', post %>
+
+<div class="tags">
+  <ul>
+  <% post.tags.each do |tag| %>
+    <li><%= link_to tag , { :action => :tag, :id => tag.name } %></li>
+  <% end %>
+  </ul>
+</div>
+
 <ul class="nav">
 
  <% if can? :manage, @post%>
