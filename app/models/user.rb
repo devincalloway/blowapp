@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   has_and_belongs_to_many :roles
-  
+  acts_as_tagger
   has_many :posts
   
   #Find Role by String Name
@@ -24,8 +24,6 @@ class User < ActiveRecord::Base
     end
   end
   
-  # Alias for <tt>acts_as_taggable_on :tags</tt>:
-  acts_as_taggable
-  acts_as_taggable_on :skills, :interests
+  
   
 end

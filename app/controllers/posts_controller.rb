@@ -10,7 +10,12 @@ before_filter :authenticate_user!, :except => [:index, :show]
       format.xml  { render :xml => @posts }
     end
   end
-
+  
+  
+ def tag
+    @posts = Post.tagged_with(params[:id]).page(params[:page])
+    render :index
+  end
 #Acts as Taggable
 def tags
     query = params[:q]
@@ -30,14 +35,15 @@ def tags
 
   # GET /articles/1
   # GET /articles/1.xml
-  def show
-    @post = Post.find(params[:id])
-    
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @post }
-    end
+def show
+  @post = Post.find(params[:id])
+  @tags = Post.tag_counts_on(:tags)
+
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @post }
   end
+end
 
   # GET /articles/new
   # GET /articles/new.xml

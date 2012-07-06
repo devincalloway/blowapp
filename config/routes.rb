@@ -3,10 +3,12 @@ Blow::Application.routes.draw do
 root :to => "posts#index"
 devise_for :users
 resources :users, :only => [:show, :index]
-  
-
-get "posts/tags" => "posts#tags", :as => :tags
-resources :posts
+match "/posts/tag/:id" => "posts#tag", :as => :tag_posts
+resources :posts do
+collection do
+  get :tag
+end
+end
 
 #authenticated :user do
  # root :to => 'home#index'
