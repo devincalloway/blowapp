@@ -1,5 +1,7 @@
 Blow::Application.routes.draw do
 
+resources :pages
+
 root :to => "posts#index"
 devise_for :users
 resources :users, :only => [:show, :index]
