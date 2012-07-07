@@ -96,6 +96,7 @@ GEM
     ffi (1.0.11)
     formtastic (2.1.1)
       actionpack (~> 3.0)
+    friendly_id (4.0.7)
     gherkin (2.11.0)
       json (>= 1.4.6)
     has_scope (0.5.1)
@@ -218,6 +219,7 @@ DEPENDENCIES
   devise
   email_spec (>= 1.2.1)
   factory_girl_rails (>= 3.1.0)
+  friendly_id (~> 4.0.1)
   jquery-rails
   kaminari
   launchy (>= 2.1.0)

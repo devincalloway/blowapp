@@ -35,6 +35,10 @@ def tags
   # GET /articles/1.xml
   def show
     @post = Post.find(params[:id])
+    #Friendly ID Redirect Old Slugs
+    if request.path != post_path(@post)
+      redirect_to @post, status: :moved_permanently
+    end
     
     respond_to do |format|
       format.html # show.html.erb

@@ -34,6 +34,7 @@ gem "cancan", ">= 1.6.7"
 gem "bootstrap-sass", ">= 2.0.1"
 gem 'kaminari'
 gem 'acts-as-taggable-on', '~> 2.3.1'
+gem "friendly_id", "~> 4.0.1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

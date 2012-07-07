@@ -1,5 +1,12 @@
 class Post < ActiveRecord::Base
-
+  
+  #Friendly ID
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+ 
+  #def shoud_generate_new_friendly_id?
+   # new_record?
+  #end
  
   attr_accessible :body, :title, :user_id, :published, :tag_list, :tag_tokens
   belongs_to :user
