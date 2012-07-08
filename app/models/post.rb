@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
    # new_record?
   #end
  
-  attr_accessible :body, :title, :user_id, :published, :tag_list, :tag_tokens, :slug
+  attr_accessible :body, :title, :user_id, :published, :tag_list, :tag_tokens
   belongs_to :user
   validates_presence_of :title, :body
   validates_uniqueness_of :title

@@ -14,7 +14,7 @@ def tag
     @posts = Post.tagged_with(params[:id]).page(params[:page])
     render :index
   end
-#Acts as Taggable
+#Acts as Taggable Tag Creation InputToken
 def tags
     query = params[:q]
     if query[-1,1] == " "

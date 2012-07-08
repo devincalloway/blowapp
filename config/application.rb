@@ -61,5 +61,8 @@ module Blow
     
     #prevent logging of passwords
     config.filter_parameters += [:password, :password_confirmation]
+    
+    #CKEditor
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

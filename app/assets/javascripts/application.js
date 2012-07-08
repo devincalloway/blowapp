@@ -13,8 +13,10 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
 //= require bootstrap
 //= require_tree .
+
 
 //Jquery Input token
 
@@ -26,3 +28,4 @@ $(function() {
     allowCustomEntry: true
   });
 });
+

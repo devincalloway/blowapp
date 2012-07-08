@@ -9,7 +9,7 @@
     on <%= @post.created_at.strftime("%B %d, %Y") %>
  </p>
     <p>
-      <%= @post.body %>
+      <%= raw (@post.body) %>
     </p>
   </div>
   <p>

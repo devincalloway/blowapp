@@ -2,7 +2,7 @@
   <h2><%= link_to post.title, post %></h2>
   By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
 </div>
-  <%= truncate(post.body, :length => 500) %> <%= link_to 'Read more...', post %>
+  <%= raw truncate(post.body, :length => 500) %> <%= link_to 'Read more...', post %>
 
 <div class="tags">
   <ul>
