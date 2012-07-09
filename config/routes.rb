@@ -1,11 +1,9 @@
 Blow::Application.routes.draw do
 
-  resources :post_categories
-
   mount Ckeditor::Engine => '/ckeditor'
 
 resources :pages
-
+resources :post_categories
 root :to => "posts#index"
 devise_for :users
 resources :users, :only => [:show, :index]
