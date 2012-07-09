@@ -1,5 +1,7 @@
 Blow::Application.routes.draw do
 
+  resources :post_categories
+
   mount Ckeditor::Engine => '/ckeditor'
 
 resources :pages
