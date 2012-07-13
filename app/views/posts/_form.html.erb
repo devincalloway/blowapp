@@ -21,6 +21,9 @@
     
    
   </div>
+  <div class="field">
+<%= f.label :category_id %><br />
+    <%= f.select(:category_id, PostCategory.all.collect {|a| [a.name, a.id]}) %>  </div>
   
   <div class="field">
   <%= f.text_field :tag_tokens, 

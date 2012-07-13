@@ -37,6 +37,8 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "friendly_id", "~> 4.0.1"
 gem "ckeditor", "3.7.1"
 gem "paperclip"
+gem "awesome_nested_set", "~> 2.1.3"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

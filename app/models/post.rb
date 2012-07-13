@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  
+  belongs_to :post_category
   #Friendly ID
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
    # new_record?
   #end
  
-  attr_accessible :body, :title, :user_id, :published, :tag_list, :tag_tokens
+  attr_accessible :body, :title, :user_id, :published, :tag_list, :tag_tokens, :category_id
   belongs_to :user
   validates_presence_of :title, :body
   validates_uniqueness_of :title

@@ -4,10 +4,21 @@
   <div class="post_title">
   <h1><%= @post.title %></h1>
   </div>
+ 
+
  <div class="post_body">
     <p>By <%= @post.user.name %>
-    on <%= @post.created_at.strftime("%B %d, %Y") %>
+    on <%= @post.created_at.strftime("%B %d, %Y")  %> in  Last update: <%= @post.updated_at %>
+    
+    <%= link_to 'Читать дальше >>', post_category_post_path(@post_category,post) %>
+    
+    <% if !@post.categories.empty? then %>
+        | Categories: <% @post.categories.each do |cat| %>
+        <%= cat.name %>
+        <% end
+    
  </p>
+ 
     <p>
       <%= raw (@post.body) %>
     </p>

@@ -14,7 +14,7 @@ class PostCategoriesController < InheritedResources::Base
     # GET /categories/new
   # GET /categories/new.xml
   def new
-    @post_category = Post_Category.new
+    @post_category = PostCategory.new
   
     respond_to do |format|
       format.html # new.html.erb
@@ -25,7 +25,7 @@ class PostCategoriesController < InheritedResources::Base
     # POST /categories
   # POST /categories.xml
   def create
-    @post_category = Category.new(params[:post_category])
+    @post_category = PostCategory.new(params[:post_category])
   
     respond_to do |format|
       if @post_category.save
