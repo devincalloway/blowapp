@@ -5,8 +5,7 @@ before_filter :authenticate_user!, :except => [:index, :show, :tag]
   # GET /articles.xml
   def index
     @posts = Post.published.page(params[:page]).per(5).ordered
-    @posts = @post_category.posts.all
-    
+        
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
