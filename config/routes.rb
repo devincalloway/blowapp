@@ -1,5 +1,7 @@
 Blow::Application.routes.draw do
 
+  resources :videos
+
   mount Ckeditor::Engine => '/ckeditor'
 
 resources :pages
