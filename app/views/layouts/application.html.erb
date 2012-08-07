@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "BLOW! Hip Hop" %></title>
     <meta name="description" content="">
     <meta name="author" content="">
     
@@ -20,28 +20,69 @@
     
     
   </head>
-  <body>
+  <body>  	
+  <div id="container-fluid">
+  	<%= link_to "BLOW! Hip Hop", root_path, :id => 'topleft' %>
+  	
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
+        <div class="container-fluid">
+        	<div class="nav pull-left social_icons"> 
+        		<a href="#"><img src="/img/Twitter.png" alt="Twitter"></a>
+        
+                  <a href="#"><img src="/img/Facebook.png"  alt="Facebook"></a>
+        
+                  <a href="#"><img src="/img/Tumblr.png"  alt="Tumblr"></a>
+        
+                  <a href="#"><img src="/img/YouTube.png" alt="YouTube"></a>
+        
+          </div>
+          <form class="navbar-search pull-right">
+  <input type="text" class="search-query" placeholder="Search">
+      </form>
+     
+        <div class="pull-right login">
+		<%= render 'layouts/navigation' %>
+        </div>
+          
         </div>
       </nav>
     </header>
+    <div class="sidebar left">
+<!--Sidebar content-->
+
+<ul class="nav nav-list">
+        
+          <li><%= link_to('Blog', posts_path)  %></li>
+
+          <!--<li class="nav-header">My Block</li>
+          <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+           <li><a href="#"><i class="icon-user"></i> Connects</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+          <li><a href="#"><i class="icon-flag"></i> Help</a></li>-->
+
+    </ul>
+        <ul class="invite">
+        	<li><a href="#">Invite Friends</a></li>
+        </ul>
+
+
+
+</div>
+<div class="sidebar_right"><img src="/img/300x250.gif" width="300" height="250" alt="300x250">
+   
+</div>
     <div id="main" role="main">
-      <div class="container">
         <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
+         
+              <%= render 'layouts/messages'%>
               <%= yield %>
-            </div>
-          </div>
+              
           <footer>
           </footer>
-        </div>
+        
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
-
+</div>
   </body>
 </html>

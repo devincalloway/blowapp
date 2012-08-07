@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<section id="blog_entries">
+	<article class="blog_latest_post">
+	<div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
@@ -28,6 +29,7 @@
     </div>
   
   <div class="field">
+  <%= f.label :tags %><br />
   <%= f.text_field :tag_tokens, 
              :id => "post_tags", 
              "data-pre" => @post.tag_list.map {|tag| {:id => tag, :name => tag } }.to_json %>
@@ -42,3 +44,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</article>
+</section>

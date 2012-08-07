@@ -1,8 +1,8 @@
+<section id="blog_entries" class="post_index">
 <h1>Listing posts</h1>
-<div class="post_index">
   <%= render @posts %>
-</div>
-<%= paginate @posts %>
+  <%= paginate @posts %>
+</section>
 <br />
 
 <% if can? :create, Post %>

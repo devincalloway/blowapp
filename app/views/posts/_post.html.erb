@@ -1,27 +1,28 @@
+<article class="blog_latest_post">
 <div class="post_header">
   <h2><%= link_to post.title, post %></h2>
   By <%= post.user.name %> on <%= post.created_at.strftime("%B %d %Y") %><br />
 </div>
   <%= raw truncate(post.body, :length => 500) %> <%= link_to 'Read more...', post %>
 
-<div class="tags">
-  <ul>
+  <ul class="tags">
   <% post.tags.each do |tag| %>
-    <li><%= link_to tag , { :action => :tag, :id => tag.name } %></li>
+    <li><%= link_to tag , { :action => :tag, :id => tag.name } %>, </li>
   <% end %>
   </ul>
-</div>
-
-<ul class="nav">
+  
+<ul class="edit">
 
  <% if can? :manage, @post%>
-  <li><%= link_to 'Edit', edit_post_path(post) %> </li>
+  <li><%= link_to 'Edit', edit_post_path(post),:class => 'btn' %> </li>
 <% end %>
    
    <% if can? :manage, post %>
       <li>
-      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Delete', post,:class => 'btn', :confirm => 'Are you sure?', :method => :delete %>
       </li>
    <% end %>
 
 </ul>
+
+</article>

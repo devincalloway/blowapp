@@ -1,14 +1,13 @@
+<section id="blog_entries">
 <p id="notice"><%= notice %></p>
+<article class="blog_latest_post">
+  <h2><%= @post.title %></h2>
 
-<div id="post-content" class="span-17">
-  <div class="post_title">
-  <h1><%= @post.title %></h1>
-  </div>
  
 
  <div class="post_body">
     <p>By <%= @post.user.name %>
-    on <%= @post.created_at.strftime("%B %d, %Y")  %> in  Last update: <%= @post.updated_at %>
+    on <time><%= @post.created_at.strftime("%B %d, %Y")  %></time> in  Last update: <time><%= @post.updated_at %></time>
     
  </p>
  
@@ -18,25 +17,24 @@
   </div>
   <p>
   <b>Tags:</b>
-  <ul>
+  <ul class="tags">
   <% @post.tags.each do |tag| %>
-    <li><%= link_to tag , { :action => :tag, :id => tag.name } %></li>
+    <li><%= link_to tag , { :action => :tag, :id => tag.name } %>, </li>
   <% end %>
   </ul>
 </p>
-</div>
-
-<ul class="nav">
+<ul class="edit">
 <% if can? :manage, @post %>
-  <li><%= link_to 'Edit', edit_post_path %></li>
+  <li><%= link_to 'Edit', edit_post_path, :class =>'btn' %></li>
 <% end %>
 
 <% if can? :manage, @post %>
-      <li><%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %></li>
+      <li><%= link_to 'Delete', @post, :class => 'btn', :confirm => 'Are you sure?', :method => :delete %></li>
    <% end %>
-
-
 
 </ul>
 
+</article>
 <%= link_to 'Back', posts_path %>
+</section>
+

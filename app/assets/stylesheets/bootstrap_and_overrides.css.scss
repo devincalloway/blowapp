@@ -2,5 +2,452 @@
 $iconSpritePath: image-url('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-url('glyphicons-halflings-white.png');
 @import "bootstrap";
-body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+label {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*Devins Mods*/
+
+.content {
+  margin: 0 167px;  /* negative indent the amount of the padding to maintain the grid system */
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.alert {
+  margin-right: 167px;
+}
+
+.body_content {
+  color: #FFFFFF;
+  padding-bottom: 60px;
+  margin-top: 0px;
+  margin-right: 0;
+  margin-bottom: 40px;
+  margin-left: 200px;
+}
+
+.body_content h1 {
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.body_content h2 {
+  color: #eee;
+  padding-top: 15px;  
+  padding-bottom: 15px;
+}
+
+.body_content h3 {
+  color: #eee;
+  
+}
+#topleft {
+  position: fixed;
+  left: 0px;
+  top: 35px;
+  display: block;
+  height: 120px;
+  width: 147px;
+  text-indent: -999em;
+  text-decoration: none;
+  background-image: url(../img/BLOW-logo-W-BAND.png);
+  background-repeat: no-repeat;
+}
+
+//Navbar
+.navbar-inner {
+    background-color: #2C2C2C;
+    background-image: -moz-linear-gradient(center top , #333333, #222222);
+    background-repeat: repeat-x;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.navbar .nav > li > a {
+    color: #999999;
+    float: none;
+    line-height: 19px;
+    padding: 4px 5px 6px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.social_icons {
+  padding-top: 8px;
+}
+
+//Sidebar
+
+.sidebar { 
+  
+  background-color: #000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  top:160px;
+  left: 0;
+    position: fixed;
+    width: 147px;
+    z-index: 3;
+
+  
+}
+//Right Sidebar
+.sidebar_right {
+    float: right;
+    left: auto;
+    margin-right: 15px;
+    margin-top: 25px;
+    position: relative;
+    top: 0;
+}
+//Left Navigation
+
+.nav-list {
+    margin-bottom: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.nav-list > li > a, .nav-list .nav-header {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.nav a {
+  color: #fff;
+  font-size: 18px; 
+}
+.nav-list > li a {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.nav > li > a:hover {
+  color:#fff;
+  text-decoration: none;
+  background-color: #313234;
+}
+.invite li a:hover {
+  
+  background-color: #fff;
+}
+.invite a {
+  color: #000;
+  width:100px;
+  height:25px;
+  display:block;
+  background-color:#fff;  
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+//Home Featured
+.featured_vids {
+  margin-top: 0px;
+}
+
+//Home - Blog Latest
+
+.home_blog_entries article {
+  clear:both;
+  margin-bottom: 75px;
+}
+
+.home_blog_post ul li {
+  float:left;
+  list-style-type: none;  
+  padding-right: 15px;
+}
+
+
+
+//Video + Blog Entries
+.tags {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+.tags li {
+  float: left;
+  margin-right: 10px;
+}
+.pagination {
+  float: left;
+  clear: both;
+}
+.info_length {
+  
+}
+.info_category {
+  
+}
+.info_comments {
+  
+  
+}
+.info_like {
+  
+  
+}
+
+//Home - Video Latest
+.home_videos article {
+  float:left;
+  margin-top: 0;
+  margin-bottom: 20px;  
+}
+
+.home_videos article h2 a {
+  color: #F00;
+}
+.home_videos article h3 a {
+  color: #ccc;
+  
+}
+
+.view_all {
+  clear: both;
+  font-size: 14px;
+  margin-top:15px;
+}
+
+
+
+//Videos - Home
+
+.filter {
+  width:160px;
+  padding-right: 15px;
+  
+}
+.filter li a {
+  
+  font-size:14px;
+  
+}
+.filter li a:hover {
+  
+  background-color:#fff;
+}
+
+.filter_btn {
+  
+  text-align:left;  
+}
+.filter_dropdown li a:hover {
+  color:#000;
+  background-color:#eee;
+
+  
+}
+
+#video_entries article {
+  
+  display:block;
+  clear:both;
+  
+}
+
+#video_entries article h3 {
+  font-size:22px; 
+}
+
+.video_home_post {
+  margin-right:200px;
+  margin-bottom: 75px;
+  
+}
+
+.post_info {
+  margin-left: 0px; 
+  
+}
+.post_info li {
+  float:left;
+  list-style-type: none;  
+  padding-right: 15px;
+}
+
+
+time {
+  color: #999;
+}
+
+.views {
+  
+  color: #999;  
+}
+
+
+//Watch Video
+
+
+#watch_video article {
+  
+  display:block;
+  clear:both;
+  
+}
+.video_post {
+  
+}
+
+.video_tabs > li > a:hover {
+  background-color:#fff;
+
+}
+.carousel_padding {
+  margin-left:63px;
+  
+}
+
+//Newsletter
+
+.newsletter_home {
+  background-color: #FFF;
+  height: 83px;
+  width:290px;
+  padding-left:10px;
+
+}
+
+.newsletter_home h4 {
+  padding-top:10px;
+  
+}
+
+.newsletter {
+  background-color: #FFF;
+  padding-left:10px;
+  margin-top:15px;
+  width:290px;
+  color:#000;
+
+}
+
+.newsletter h4 {
+  padding-top:10px;
+  
+}
+
+.email_input  {
+  width:150px;
+    
+}
+.email_submit {
+  
+  margin-bottom: 10px;  
+}
+
+//Login
+.login { 
+}
+.login  a {
+  color: #fff;  
+}
+.invite { 
+  
+  margin-top:15px;
+  margin-left: 0px;
+  list-style-type: none;  
+
+
+}
+
+//Ads
+.sky-ad {
+  
+text-align:center;
+clear:both; 
+padding-top:15px;
+}
+//Blogs
+#blog_entries {
+margin-right:200px;
+}
+#blog_entries article {
+  
+  display:block;
+  margin-bottom:50px; 
+}
+
+#blog_entries article h3 {
+  font-size:22px; 
+}
+
+.blog_latest_post {
+  clear:left;
+
+}
+#blog_entries article time {
+  clear:right;
+  margin-bottom: 25px;  
+}
+.body_copy { 
+  min-height:175px;
+}
+.blog_post_info {
+}
+.edit {
+  list-style-type: none; 
+  margin:0;
+}
+.edit li {
+  float:left;
+  margin-right:10px;
+}
+
+//Body Header
+.body_content_header {
+  clear:both; 
+}
+
+.container-fluid > .sidebar_right {
+    position: relative;
+    top: 0;
+    left:auto;
+  float:right;
+  margin-right:15px;
+  margin-top:25px;
+}
+
+.container-fluid > .sidebar_right h3 {
+color:#FF0000;  
+}
+.left {
+    float:left;
+}
+
+.container-fluid > .content {
+    margin: 0 167px; /* width of sidebars + 10px of margin */
+}
+.fixed-fluid {
+    margin-left: 240px;
+}
+.fluid-fixed {
+    margin-right: 240px;
+    margin-left:auto !important;
+}
+.fixed-fixed {
+    margin: 0 240px;
+}
+
+hr {
+clear:both; 
+}
+footer {
+clear:both; 
+
+}
+//Modal Login
+
+.modal h3 {
+  color:#000; 
+}
+
+//Miscellaneous
